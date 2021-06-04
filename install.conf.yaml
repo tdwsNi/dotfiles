@@ -42,9 +42,9 @@
     file: scripts/dotbot/Brewfile
 
 - shell:
-    - [scripts/macos.sh, Setting up MacOS]
-    - [scripts/atom.sh, Setting up Atom]
-    - [scripts/extralinks.sh, Setting up Extras]
+    - [scripts/dotbot/macos.sh, Setting up MacOS]
+    - [scripts/dotbot/atom.sh, Setting up Atom]
+    - [scripts/dotbot/extralinks.sh, Setting up Extras]
 
 - crontab:
   - cron: 0 3 * * *
