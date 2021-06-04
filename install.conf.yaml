@@ -6,6 +6,10 @@
         ignore-missing: true
     shell:
         stderr: true
+    brewfile:
+        stdout: false
+        stderr: false
+        include: ['tap', 'brew', 'cask', 'mas']
 
 - clean: ['~']
 
@@ -34,114 +38,12 @@
     ~/.atom: atom
     ~/Library/Preferences/com.googlecode.iterm2.plist: iTerm2/com.googlecode.iterm2.plist
 
-- tap:
-    - homebrew/cask
-    - homebrew/cask-fonts
-    - homebrew/cask-versions
-    - homebrew/bundle
-    - caskroom/versions
-
-- brew:
-    - autopep8
-    - beautysh
-    - black
-    - clang-format
-    - crystal
-    - dfmt
-    - elm-format
-    - emacs
-    - gn
-    - isort
-    - uncrustify
-    - brew-cask-completion
-    - ack
-    - ag
-    - autojump
-    - bat
-    - caddy
-    - coreutils
-    - curl --with-openssl
-    - diffutils
-    - dfu-util
-    - dockutil
-    - dos2unix
-    - ffmpeg
-    - findutils
-    - readline
-    - python
-    - pyenv
-    - gawk
-    - httpie
-    - grep --with-default-names
-    - gifsicle
-    - gnupg
-    - gnu-sed --with-default-names
-    - git
-    - jq
-    - mas
-    - homebrew/dupes/screen
-    - todo-txt
-    - ttyrec
-    - moreutils
-    - ngrep
-    - nmap
-    - imagemagick
-    - wget --enable-iri
-    - tree
-    - pkg-config
-    - reattach-to-user-namespace
-    - tmux
-    - tmux-mem-cpu-load
-    - vim --with-client-server --with-override-system-vi
-    - yarn
-    - youtube-dl
-    - zsh
-    - zsh-completions
-
-- cask:
-    - atom
-    - authy
-    - alfred
-    - bartender
-    - blockblock
-    - knockknock
-    - cookie
-    - docker
-    - evernote
-    - hazel
-    - istat-menus
-    - itsycal
-    - kindle
-    - cheatsheet
-    - dropbox
-    - firefox
-    - karabiner-elements
-    - font-fontawesome
-    - font-hack-nerd-font
-    - font-sauce-code-pro-nerd-font
-    - font-space-mono-nerd-font
-    - font-roboto-mono-nerd-font
-    - lastpass
-    - little-snitch
-    - micro-snitch
-    - telegram
-    - iTerm2
-    - keybase
-    - oversight
-    - vagrant
-    - vagrant-manager
-    - virtualbox
-    - vlc
-    - adobe-creative-cloud
-    - adoptopenjdk8
-    - spotify
-    - xquartz
-    - boxcryptor
+- brewfile:
+    file: scripts/dotbot/Brewfile
 
 - shell:
     - [scripts/macos.sh, Setting up MacOS]
     - [scripts/atom.sh, Setting up Atom]
-    - [scripts/forklift.sh, Setting up Forklift]
     - [scripts/extralinks.sh, Setting up Extras]
 
 - crontab:
