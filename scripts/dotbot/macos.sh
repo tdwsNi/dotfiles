@@ -1,4 +1,4 @@
-#!/usr/bin/env bash
+#!/bin/bash
 
 set -e
 set -o pipefail
@@ -35,7 +35,7 @@ sudo defaults write /Library/Preferences/com.apple.alf stealthenabled -int 1
 sudo defaults write /Library/Preferences/SystemConfiguration/com.apple.captive.control Active -bool false
 
 # Disable remote apple events
-sudo systemsetup  -setremoteappleevents off
+#sudo systemsetup  -setremoteappleevents off
 
 # Disable remote login
 sudo systemsetup  -setremotelogin off
@@ -61,7 +61,7 @@ sudo systemsetup  -setwakeonnetworkaccess off
 #defaults write /Library/Preferences/com.apple.mDNSResponder.plist NoMulticastAdvertisements -bool true
 
 # Disable diagnostic reports
-sudo launchctl  unload -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
+# sudo launchctl  unload -w /System/Library/LaunchDaemons/com.apple.SubmitDiagInfo.plist
 
 # Log authentication events for 90 days
 #perl -p -i -e 's/rotate=seq file_max=5M all_max=20M/rotate=utc file_max=5M ttl=90/g' "/etc/asl/com.apple.authd"
