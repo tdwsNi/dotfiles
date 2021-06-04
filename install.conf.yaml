@@ -1,0 +1,141 @@
+- defaults:
+    link:
+        create: true
+        relink: true
+        force:  true
+        ignore-missing: true
+
+- clean: ['~']
+
+- link:
+    ~/.profile: shell/.profile
+    ~/.wgetrc: wget/.wgetrc
+    ~/.tmux.conf: tmux/.tmux.conf
+    ~/.tmux: tmux/.tmux
+    ~/.tmux-powerlinerc: tmux/.tmux-powerlinerc
+    ~/.gitignore_global: .gitignore_global
+    ~/.gitconfig: .gitconfig_global
+    ~/.zprofile: zsh/.zprofile
+    ~/.zshrc: zsh/.zshrc
+    ~/.zhenv: zsh/.zshenv
+    ~/.screenrc: screen/.screenrc
+    ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
+    ~/.atom: atom
+    ~/Library/Preferences/com.googlecode.iterm2.plist: iTerm2/com.googlecode.iterm2.plist
+
+- tap:
+    - homebrew/cask
+    - homebrew/cask-fonts
+    - homebrew/cask-versions
+    - homebrew/bundle
+    - caskroom/versions
+
+- brew:
+    - autopep8
+    - beautysh
+    - black
+    - clang-format
+    - crystal
+    - dfmt
+    - elm-format
+    - emacs
+    - gn
+    - isort
+    - uncrustify
+    - brew-cask-completion
+    - ack
+    - ag
+    - autojump
+    - bat
+    - caddy
+    - coreutils
+    - curl --with-openssl
+    - diffutils
+    - dfu-util
+    - dockutil
+    - dos2unix
+    - ffmpeg
+    - findutils
+    - readline
+    - python
+    - pyenv
+    - gawk
+    - httpie
+    - grep --with-default-names
+    - gifsicle
+    - gnupg
+    - gnu-sed --with-default-names
+    - git
+    - jq
+    - mas
+    - homebrew/dupes/screen
+    - todo-txt
+    - ttyrec
+    - moreutils
+    - ngrep
+    - nmap
+    - imagemagick
+    - wget --enable-iri
+    - tree
+    - pkg-config
+    - reattach-to-user-namespace
+    - tmux
+    - tmux-mem-cpu-load
+    - vim --with-client-server --with-override-system-vi
+    - yarn
+    - youtube-dl
+    - zsh
+    - zsh-completions
+
+- cask:
+    - atom
+    - authy
+    - alfred
+    - bartender
+    - blockblock
+    - knockknock
+    - cookie
+    - docker
+    - evernote
+    - hazel
+    - istat-menus
+    - itsycal
+    - kindle
+    - cheatsheet
+    - dropbox
+    - firefox
+    - karabiner-elements
+    - font-fontawesome
+    - font-hack-nerd-font
+    - font-sauce-code-pro-nerd-font
+    - font-space-mono-nerd-font
+    - font-roboto-mono-nerd-font
+    - lastpass
+    - little-snitch
+    - micro-snitch
+    - telegram
+    - iTerm2
+    - keybase
+    - oversight
+    - vagrant
+    - vagrant-manager
+    - virtualbox
+    - vlc
+    - adobe-creative-cloud
+    - adoptopenjdk8
+    - spotify
+    - xquartz
+    - boxcryptor
+
+- shell:
+    - [git submodule init]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
+    - [scripts/macos.sh]
+    - [scripts/atom.sh]
+    - [scripts/forklift.sh]
+    - [scripts/extralinks.sh]
+
+- crontab:
+  - cron: 0 3 * * *
+    command: ~/.dotfiles/scripts/cron.sh

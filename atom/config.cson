@@ -1,0 +1,118 @@
+"*":
+  "atom-beautify":
+    executables:
+      autopep8:
+        path: "/usr/local/bin/autopep8"
+      beautysh:
+        path: "/usr/local/bin/beautysh"
+      black:
+        path: "/usr/local/bin/black"
+      "clang-format":
+        path: "/usr/local/bin/clang-format"
+      crystal:
+        path: "/usr/local/bin/crystal"
+      dfmt:
+        path: "/usr/local/bin/dfmt"
+      "elm-format":
+        path: "/usr/local/bin/elm-format"
+      emacs:
+        path: "/usr/local/bin/emacs"
+      gn:
+        path: "/Volumes/src/dev/depot_tools/gn"
+      goimports: {}
+      isort:
+        path: "/usr/local/bin/isort"
+      uncrustify:
+        path: "/usr/local/bin/uncrustify"
+  "atom-package-deps":
+    ignored: []
+  "base16-syntax":
+    scheme: "Solarized"
+    style: "Light"
+  core:
+    disabledPackages: [
+      "linter"
+    ]
+    ignoredNames: [
+      ".git"
+      ".hg"
+      ".svn"
+      ".DS_Store"
+      "._*"
+      "Thumbs.db"
+      "desktop.ini"
+      ".pioenvs"
+      ".piolibdeps"
+      ".clang_complete"
+      ".gcc-flags.json"
+    ]
+    openEmptyEditorOnStart: false
+    projectHome: "/Volumes/src/Dev"
+    telemetryConsent: "no"
+    themes: [
+      "one-dark-ui"
+      "base16-syntax"
+    ]
+  "exception-reporting":
+    userId: "6a256366-bec2-4d4b-b4c9-9dbf8282e57b"
+  "file-icons":
+    coloured: false
+  "linter-ui-default":
+    panelHeight: 117
+    useBusySignal: false
+  minimap:
+    plugins:
+      "find-and-replace": true
+      "find-and-replaceDecorationsZIndex": 0
+      "git-diff": true
+      "git-diffDecorationsZIndex": 0
+      "highlight-selected": true
+      "highlight-selectedDecorationsZIndex": 0
+      linter: true
+      linterDecorationsZIndex: 0
+      pigments: true
+      pigmentsDecorationsZIndex: 0
+      "split-diff": true
+      "split-diffDecorationsZIndex": 0
+  "platformio-ide-terminal":
+    ansiColors:
+      normal:
+        black: "#003541"
+        blue: "#2aa198"
+        green: "#859901"
+        magenta: "#d33682"
+        red: "#dc322f"
+        white: "#eee8d5"
+        yellow: "#b58901"
+      zBright:
+        brightBlack: "#94a4a6"
+        brightBlue: "#839496"
+        brightCyan: "#93a1a1"
+        brightGreen: "#586e75"
+        brightMagenta: "#6c6ec6"
+        brightRed: "#cb4b16"
+        brightWhite: "#fdf6e3"
+        brightYellow: "#003541"
+    core: {}
+    iconColors:
+      blue: "#268bd2"
+      cyan: "#2aa198"
+      green: "#859901"
+      magenta: "#d33682"
+      orange: "#cb4b16"
+      red: "#dc322f"
+      yellow: "#b58901"
+    style:
+      fontFamily: "RobotoMono Nerd Font Mono"
+    toggles:
+      autoClose: true
+      cursorBlink: false
+  "split-diff":
+    ignoreWhitespace: true
+  "tool-bar":
+    fullWidth: false
+  "tree-view":
+    hideIgnoredNames: true
+    hideVcsIgnoredFiles: true
+  welcome:
+    showOnStartup: false
