@@ -1,8 +1,8 @@
 # Path to your oh-my-zsh configuration.
-export ZSH=$HOME/.dotfiles/zsh/ohmyzsh
+export ZSH=$HOME/.oh-my-zsh
 
 # POWERLEVEL10K
-export ZSH_THEME="../../POWERLEVEL10K/POWERLEVEL10K"
+export ZSH_THEME="~/.dotfiles/zsh/POWERLEVEL10K"
 source .pl10k
 
 # Uncomment the following line to use case-sensitive completion.
