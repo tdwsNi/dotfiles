@@ -4,8 +4,18 @@
         relink: true
         force:  true
         ignore-missing: true
+    shell:
+        stderr: true
 
 - clean: ['~']
+
+- shell:
+    - [git submodule init]
+    - [git submodule update --init --recursive, Installing submodules]
+    - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
+    - [sh pre-install.sh, Running pre installation script]
+    - [mkdir -p ~/.oh-my-zsh/custom/, Creating oh-my-zsh custom forlders]
+    - [mkdir -p ~/.oh-my-zsh/custom/plugins, Creating oh-my-zsh custom plugins folders]
 
 - link:
     ~/.profile: shell/.profile
@@ -18,6 +28,7 @@
     ~/.zprofile: zsh/.zprofile
     ~/.zshrc: zsh/.zshrc
     ~/.zhenv: zsh/.zshenv
+    ~/.oh-my-zsh/custom/plugins: zsh/ohmyzsh/custom/plugins
     ~/.screenrc: screen/.screenrc
     ~/.config/karabiner/karabiner.json: karabiner/karabiner.json
     ~/.atom: atom
@@ -128,13 +139,10 @@
     - boxcryptor
 
 - shell:
-    - [git submodule init]
-    - [git submodule update --init --recursive, Installing submodules]
-    - [git config --global core.excludesfile ~/.gitignore_global, Activating .gitignore_global]
-    - [scripts/macos.sh]
-    - [scripts/atom.sh]
-    - [scripts/forklift.sh]
-    - [scripts/extralinks.sh]
+    - [scripts/macos.sh, Setting up MacOS]
+    - [scripts/atom.sh, Setting up Atom]
+    - [scripts/forklift.sh, Setting up Forklift]
+    - [scripts/extralinks.sh, Setting up Extras]
 
 - crontab:
   - cron: 0 3 * * *
